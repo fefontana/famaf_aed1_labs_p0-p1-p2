@@ -1,3 +1,10 @@
+--implementacion de elem o pertenece
+pert :: Eq a => a -> [a] -> Bool
+pert _ [] = False
+pert e (x:xs)
+  | e == x    = True
+  | otherwise = pert e xs
+
 --length reimplementacion
 tam :: [a] -> Int
 tam [] = 0
